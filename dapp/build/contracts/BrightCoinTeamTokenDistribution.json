@@ -1,0 +1,4711 @@
+{
+  "contractName": "BrightCoinTeamTokenDistribution",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "TotalAllocatedTeamToken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "teamTokenDetailsAddr",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipRenounced",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newTeamAddr",
+          "type": "address"
+        }
+      ],
+      "name": "RemoveTeamFromFurtherInvestment",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "TotalTeamnvestor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_newTeamAddr",
+          "type": "address"
+        }
+      ],
+      "name": "CheckTeamTokenAmount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610430806100606000396000f300608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631e9e3f97146100885780634c3ed4e1146100df578063577ed9d21461010a5780638da5cb5b1461014d5780638f32d59b146101a4578063bc305852146101d3578063da04bb10146101fe575b600080fd5b34801561009457600080fd5b506100c9600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061026b565b6040518082815260200191505060405180910390f35b3480156100eb57600080fd5b506100f46102bc565b6040518082815260200191505060405180910390f35b34801561011657600080fd5b5061014b600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102c9565b005b34801561015957600080fd5b50610162610340565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101b057600080fd5b506101b9610369565b604051808215151515815260200191505060405180910390f35b3480156101df57600080fd5b506101e86103c0565b6040518082815260200191505060405180910390f35b34801561020a57600080fd5b50610229600480360381019080803590602001909291905050506103c6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600080600360008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090508060010154915050919050565b6000600480549050905090565b60006102d3610369565b15156102de57600080fd5b600360008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905060008160030160006101000a81548160ff0219169083151502179055505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b60025481565b6004818154811015156103d557fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058208b8b6181130633c0f584735c802493f4c8e3374736db678d1ba98c3afc63d0c00029",
+  "deployedBytecode": "0x608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631e9e3f97146100885780634c3ed4e1146100df578063577ed9d21461010a5780638da5cb5b1461014d5780638f32d59b146101a4578063bc305852146101d3578063da04bb10146101fe575b600080fd5b34801561009457600080fd5b506100c9600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061026b565b6040518082815260200191505060405180910390f35b3480156100eb57600080fd5b506100f46102bc565b6040518082815260200191505060405180910390f35b34801561011657600080fd5b5061014b600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102c9565b005b34801561015957600080fd5b50610162610340565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101b057600080fd5b506101b9610369565b604051808215151515815260200191505060405180910390f35b3480156101df57600080fd5b506101e86103c0565b6040518082815260200191505060405180910390f35b34801561020a57600080fd5b50610229600480360381019080803590602001909291905050506103c6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600080600360008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090508060010154915050919050565b6000600480549050905090565b60006102d3610369565b15156102de57600080fd5b600360008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905060008160030160006101000a81548160ff0219169083151502179055505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b60025481565b6004818154811015156103d557fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058208b8b6181130633c0f584735c802493f4c8e3374736db678d1ba98c3afc63d0c00029",
+  "sourceMap": "99:2397:11:-;;;212:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;212:26:11;627:10:13;618:6;;:19;;;;;;;;;;;;;;;;;;99:2397:11;;;;;;",
+  "deployedSourceMap": "99:2397:11:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2285:208;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2285:208:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1873:105;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1873:105:11;;;;;;;;;;;;;;;;;;;;;;;1649:219;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1649:219:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;697:70:13;;8:9:-1;5:2;;;30:1;27;20:12;5:2;697:70:13;;;;;;;;;;;;;;;;;;;;;;;;;;;1130:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1130:83:13;;;;;;;;;;;;;;;;;;;;;;;;;;;304:38:11;;8:9:-1;5:2;;;30:1;27;20:12;5:2;304:38:11;;;;;;;;;;;;;;;;;;;;;;;624:37;;8:9:-1;5:2;;;30:1;27;20:12;5:2;624:37:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2285:208;2357:7;2372:36;2411:23;:37;2435:12;2411:37;;;;;;;;;;;;;;;2372:76;;2465:11;:23;;;2458:30;;2285:208;;;;:::o;1873:105::-;1921:7;1944:20;:27;;;;1937:34;;1873:105;:::o;1649:219::-;1743:36;887:9:13;:7;:9::i;:::-;879:18;;;;;;;;1782:23:11;:37;1806:12;1782:37;;;;;;;;;;;;;;;1743:76;;1858:5;1825:11;:30;;;:38;;;;;;;;;;;;;;;;;;1649:219;;:::o;697:70:13:-;734:7;756:6;;;;;;;;;;;749:13;;697:70;:::o;1130:83::-;1169:4;1202:6;;;;;;;;;;;1188:20;;:10;:20;;;1181:27;;1130:83;:::o;304:38:11:-;;;;:::o;624:37::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.21 <0.5.0;\n//pragma solidity ^0.4.25;\n\nimport \"./BrightCoinTokenOwner.sol\";\n\ncontract BrightCoinTeamTokenDistribution  is BrightCoinTokenOwner\n{\n\n\n  mapping(address => uint256)TeamBalances;\nconstructor() public\n{\n \n}\n\n//Team Distribution  \n //There might be multiple entry to this\n uint256 public TotalAllocatedTeamToken;\n \n \n struct teamDistribution {\n        address addr;\n        uint256 tokenamount;\n        uint256 lockexpiry;\n        bool   teamActiveInvestor;  //To Ensure if team is still on\n        bool tokenlocked;\n    \n    }\n\n mapping(address => teamDistribution) teamDistributionDetails;\n address[] public teamTokenDetailsAddr;\n \n\n //Team Token Distribution  Starts\n\n//Addng Details to Team Token\n function AddTeam(address _newTeamAddr,uint256 _tokenamount,\n uint256 _lockexpirydate,\n bool _tokenLocked)  internal {\n     \n  teamDistribution storage teamDetails = teamDistributionDetails[_newTeamAddr];\n    teamDetails.addr = _newTeamAddr;\n    teamDetails.tokenamount = _tokenamount;\n    teamDetails.lockexpiry = _lockexpirydate;\n    teamDetails.teamActiveInvestor = true;\n    teamDetails.tokenlocked = _tokenLocked;\n    teamTokenDetailsAddr.push(_newTeamAddr);\n\n }\n\n function UpdateTeamTokenDetails(address _teamaddr,\n                            uint256 _tokenamount,\n                            uint256 _lockExpiryDateTime) internal\n {\n       //check if Team is Active\n       require(CheckIfTeamActive(_teamaddr) == true);\n      teamDistribution storage teamDetails = teamDistributionDetails[_teamaddr];\n \n      teamDetails.tokenamount += _tokenamount;\n      teamDetails.lockexpiry = _lockExpiryDateTime;\n  \n }\n\n function RemoveTeamFromFurtherInvestment(address _newTeamAddr) public onlyTokenOwner  \n {\n    teamDistribution storage teamDetails = teamDistributionDetails[_newTeamAddr];\n    teamDetails.teamActiveInvestor = false;\n\n }\n\n\n\n function TotalTeamnvestor() public view returns(uint256) \n {\n   return teamTokenDetailsAddr.length;\n  \n }\n\n//check if Team Removed \n function CheckIfTeamActive(address _teamAddr) view internal returns(bool)\n {\n\n  teamDistribution storage teamDetails = teamDistributionDetails[_teamAddr];\n\n  if(teamDetails.teamActiveInvestor == true)\n  {\n      return true;\n  }\n  return false;\n\n }\n\n //check Amount with Advisor\n function CheckTeamTokenAmount(address _newTeamAddr) view public returns(uint256)\n {\n\n  teamDistribution storage teamDetails = teamDistributionDetails[_newTeamAddr];\n        return teamDetails.tokenamount;\n\n }\n\n}",
+  "sourcePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinTeamTokenDistribution.sol",
+  "ast": {
+    "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinTeamTokenDistribution.sol",
+    "exportedSymbols": {
+      "BrightCoinTeamTokenDistribution": [
+        3980
+      ]
+    },
+    "id": 3981,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3788,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:11"
+      },
+      {
+        "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinTokenOwner.sol",
+        "file": "./BrightCoinTokenOwner.sol",
+        "id": 3789,
+        "nodeType": "ImportDirective",
+        "scope": 3981,
+        "sourceUnit": 4154,
+        "src": "61:36:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3790,
+              "name": "BrightCoinTokenOwner",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4153,
+              "src": "144:20:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BrightCoinTokenOwner_$4153",
+                "typeString": "contract BrightCoinTokenOwner"
+              }
+            },
+            "id": 3791,
+            "nodeType": "InheritanceSpecifier",
+            "src": "144:20:11"
+          }
+        ],
+        "contractDependencies": [
+          4153
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3980,
+        "linearizedBaseContracts": [
+          3980,
+          4153
+        ],
+        "name": "BrightCoinTeamTokenDistribution",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3795,
+            "name": "TeamBalances",
+            "nodeType": "VariableDeclaration",
+            "scope": 3980,
+            "src": "171:39:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 3794,
+              "keyType": {
+                "id": 3792,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "179:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "171:27:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 3793,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "190:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3798,
+              "nodeType": "Block",
+              "src": "233:5:11",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 3799,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3796,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:2:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3797,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "233:0:11"
+            },
+            "scope": 3980,
+            "src": "212:26:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 3801,
+            "name": "TotalAllocatedTeamToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 3980,
+            "src": "304:38:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 3800,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "304:7:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "BrightCoinTeamTokenDistribution.teamDistribution",
+            "id": 3812,
+            "members": [
+              {
+                "constant": false,
+                "id": 3803,
+                "name": "addr",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "383:12:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 3802,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "383:7:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3805,
+                "name": "tokenamount",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "405:19:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3804,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "405:7:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3807,
+                "name": "lockexpiry",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "434:18:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3806,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "434:7:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3809,
+                "name": "teamActiveInvestor",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "462:25:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 3808,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "462:4:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3811,
+                "name": "tokenlocked",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "530:16:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 3810,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "530:4:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "teamDistribution",
+            "nodeType": "StructDefinition",
+            "scope": 3980,
+            "src": "349:209:11",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 3816,
+            "name": "teamDistributionDetails",
+            "nodeType": "VariableDeclaration",
+            "scope": 3980,
+            "src": "561:60:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+              "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution)"
+            },
+            "typeName": {
+              "id": 3815,
+              "keyType": {
+                "id": 3813,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "569:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "561:36:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 3814,
+                "name": "teamDistribution",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 3812,
+                "src": "580:16:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                  "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 3819,
+            "name": "teamTokenDetailsAddr",
+            "nodeType": "VariableDeclaration",
+            "scope": 3980,
+            "src": "624:37:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 3817,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "624:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 3818,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "624:9:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3872,
+              "nodeType": "Block",
+              "src": "849:350:11",
+              "statements": [
+                {
+                  "assignments": [
+                    3831
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3831,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3873,
+                      "src": "859:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3830,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "859:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3835,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3832,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "898:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3834,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3833,
+                      "name": "_newTeamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3821,
+                      "src": "922:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "898:37:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "859:76:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3840,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3836,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "941:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3838,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "addr",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3803,
+                      "src": "941:16:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3839,
+                      "name": "_newTeamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3821,
+                      "src": "960:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "941:31:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 3841,
+                  "nodeType": "ExpressionStatement",
+                  "src": "941:31:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3846,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3842,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "978:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3844,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenamount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3805,
+                      "src": "978:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3845,
+                      "name": "_tokenamount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3823,
+                      "src": "1004:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "978:38:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3847,
+                  "nodeType": "ExpressionStatement",
+                  "src": "978:38:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3852,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3848,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "1022:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3850,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lockexpiry",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3807,
+                      "src": "1022:22:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3851,
+                      "name": "_lockexpirydate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3825,
+                      "src": "1047:15:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1022:40:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3853,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1022:40:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3858,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3854,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "1068:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3856,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "teamActiveInvestor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3809,
+                      "src": "1068:30:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 3857,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1101:4:11",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1068:37:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3859,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1068:37:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3864,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3860,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "1111:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3862,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenlocked",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3811,
+                      "src": "1111:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3863,
+                      "name": "_tokenLocked",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3827,
+                      "src": "1137:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1111:38:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3865,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1111:38:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3869,
+                        "name": "_newTeamAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3821,
+                        "src": "1181:12:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3866,
+                        "name": "teamTokenDetailsAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3819,
+                        "src": "1155:20:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 3868,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1155:25:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 3870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1155:39:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3871,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1155:39:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3873,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "AddTeam",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3828,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3821,
+                  "name": "_newTeamAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "750:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3820,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "750:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3823,
+                  "name": "_tokenamount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "771:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3822,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "771:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3825,
+                  "name": "_lockexpirydate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "794:23:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3824,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "794:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3827,
+                  "name": "_tokenLocked",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "820:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3826,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "820:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "749:89:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3829,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "849:0:11"
+            },
+            "scope": 3980,
+            "src": "733:466:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3908,
+              "nodeType": "Block",
+              "src": "1370:276:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 3887,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 3884,
+                              "name": "_teamaddr",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3875,
+                              "src": "1438:9:11",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 3883,
+                            "name": "CheckIfTeamActive",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3962,
+                            "src": "1420:17:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                              "typeString": "function (address) view returns (bool)"
+                            }
+                          },
+                          "id": 3885,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1420:28:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 3886,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1452:4:11",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "src": "1420:36:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 3882,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4588,
+                        4589
+                      ],
+                      "referencedDeclaration": 4588,
+                      "src": "1412:7:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 3888,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1412:45:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3889,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1412:45:11"
+                },
+                {
+                  "assignments": [
+                    3891
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3891,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3909,
+                      "src": "1465:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3890,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "1465:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3895,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3892,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "1504:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3894,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3893,
+                      "name": "_teamaddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3875,
+                      "src": "1528:9:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1504:34:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1465:73:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3900,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3896,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3891,
+                        "src": "1548:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3898,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenamount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3805,
+                      "src": "1548:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3899,
+                      "name": "_tokenamount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3877,
+                      "src": "1575:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1548:39:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3901,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1548:39:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3906,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3902,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3891,
+                        "src": "1595:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3904,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lockexpiry",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3807,
+                      "src": "1595:22:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3905,
+                      "name": "_lockExpiryDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3879,
+                      "src": "1620:19:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1595:44:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3907,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1595:44:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3909,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "UpdateTeamTokenDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3880,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3875,
+                  "name": "_teamaddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3909,
+                  "src": "1234:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3874,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1234:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3877,
+                  "name": "_tokenamount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3909,
+                  "src": "1281:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3876,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1281:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3879,
+                  "name": "_lockExpiryDateTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3909,
+                  "src": "1331:27:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3878,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1331:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1233:126:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3881,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1370:0:11"
+            },
+            "scope": 3980,
+            "src": "1202:444:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3928,
+              "nodeType": "Block",
+              "src": "1737:131:11",
+              "statements": [
+                {
+                  "assignments": [
+                    3917
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3917,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3929,
+                      "src": "1743:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3916,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "1743:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3921,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3918,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "1782:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3920,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3919,
+                      "name": "_newTeamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3911,
+                      "src": "1806:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1782:37:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1743:76:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3926,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3922,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3917,
+                        "src": "1825:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3924,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "teamActiveInvestor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3809,
+                      "src": "1825:30:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 3925,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1858:5:11",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "1825:38:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3927,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1825:38:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3929,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 3914,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 3913,
+                  "name": "onlyTokenOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4094,
+                  "src": "1719:14:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1719:14:11"
+              }
+            ],
+            "name": "RemoveTeamFromFurtherInvestment",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3911,
+                  "name": "_newTeamAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3929,
+                  "src": "1690:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3910,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1690:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1689:22:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3915,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1737:0:11"
+            },
+            "scope": 3980,
+            "src": "1649:219:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3937,
+              "nodeType": "Block",
+              "src": "1932:46:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 3934,
+                      "name": "teamTokenDetailsAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3819,
+                      "src": "1944:20:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                        "typeString": "address[] storage ref"
+                      }
+                    },
+                    "id": 3935,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1944:27:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3933,
+                  "id": 3936,
+                  "nodeType": "Return",
+                  "src": "1937:34:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3938,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "TotalTeamnvestor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3930,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1898:2:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3933,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3932,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3938,
+                  "src": "1921:7:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3931,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1921:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1920:9:11"
+            },
+            "scope": 3980,
+            "src": "1873:105:11",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3961,
+              "nodeType": "Block",
+              "src": "2081:172:11",
+              "statements": [
+                {
+                  "assignments": [
+                    3946
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3946,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3962,
+                      "src": "2086:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3945,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "2086:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3950,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3947,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "2125:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3949,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3948,
+                      "name": "_teamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3940,
+                      "src": "2149:9:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2125:34:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2086:73:11"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 3954,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3951,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3946,
+                        "src": "2167:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3952,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "teamActiveInvestor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3809,
+                      "src": "2167:30:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 3953,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2201:4:11",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "2167:38:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 3958,
+                  "nodeType": "IfStatement",
+                  "src": "2164:69:11",
+                  "trueBody": {
+                    "id": 3957,
+                    "nodeType": "Block",
+                    "src": "2209:24:11",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 3955,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2224:4:11",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "functionReturnParameters": 3944,
+                        "id": 3956,
+                        "nodeType": "Return",
+                        "src": "2217:11:11"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "66616c7365",
+                    "id": 3959,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "2243:5:11",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "false"
+                  },
+                  "functionReturnParameters": 3944,
+                  "id": 3960,
+                  "nodeType": "Return",
+                  "src": "2236:12:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3962,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "CheckIfTeamActive",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3941,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3940,
+                  "name": "_teamAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3962,
+                  "src": "2033:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3939,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2033:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2032:19:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3944,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3943,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3962,
+                  "src": "2074:4:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3942,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2074:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2073:6:11"
+            },
+            "scope": 3980,
+            "src": "2006:247:11",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3978,
+              "nodeType": "Block",
+              "src": "2367:126:11",
+              "statements": [
+                {
+                  "assignments": [
+                    3970
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3970,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3979,
+                      "src": "2372:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3969,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "2372:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3974,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3971,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "2411:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3973,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3972,
+                      "name": "_newTeamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3964,
+                      "src": "2435:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2411:37:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2372:76:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 3975,
+                      "name": "teamDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3970,
+                      "src": "2465:11:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                      }
+                    },
+                    "id": 3976,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "tokenamount",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 3805,
+                    "src": "2465:23:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3968,
+                  "id": 3977,
+                  "nodeType": "Return",
+                  "src": "2458:30:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3979,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "CheckTeamTokenAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3965,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3964,
+                  "name": "_newTeamAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3979,
+                  "src": "2315:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3963,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2315:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2314:22:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3968,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3967,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3979,
+                  "src": "2357:7:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3966,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2357:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2356:9:11"
+            },
+            "scope": 3980,
+            "src": "2285:208:11",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3981,
+        "src": "99:2397:11"
+      }
+    ],
+    "src": "0:2496:11"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinTeamTokenDistribution.sol",
+    "exportedSymbols": {
+      "BrightCoinTeamTokenDistribution": [
+        3980
+      ]
+    },
+    "id": 3981,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3788,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:11"
+      },
+      {
+        "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinTokenOwner.sol",
+        "file": "./BrightCoinTokenOwner.sol",
+        "id": 3789,
+        "nodeType": "ImportDirective",
+        "scope": 3981,
+        "sourceUnit": 4154,
+        "src": "61:36:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3790,
+              "name": "BrightCoinTokenOwner",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4153,
+              "src": "144:20:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BrightCoinTokenOwner_$4153",
+                "typeString": "contract BrightCoinTokenOwner"
+              }
+            },
+            "id": 3791,
+            "nodeType": "InheritanceSpecifier",
+            "src": "144:20:11"
+          }
+        ],
+        "contractDependencies": [
+          4153
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3980,
+        "linearizedBaseContracts": [
+          3980,
+          4153
+        ],
+        "name": "BrightCoinTeamTokenDistribution",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3795,
+            "name": "TeamBalances",
+            "nodeType": "VariableDeclaration",
+            "scope": 3980,
+            "src": "171:39:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 3794,
+              "keyType": {
+                "id": 3792,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "179:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "171:27:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 3793,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "190:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3798,
+              "nodeType": "Block",
+              "src": "233:5:11",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 3799,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3796,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:2:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3797,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "233:0:11"
+            },
+            "scope": 3980,
+            "src": "212:26:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 3801,
+            "name": "TotalAllocatedTeamToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 3980,
+            "src": "304:38:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 3800,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "304:7:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "BrightCoinTeamTokenDistribution.teamDistribution",
+            "id": 3812,
+            "members": [
+              {
+                "constant": false,
+                "id": 3803,
+                "name": "addr",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "383:12:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 3802,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "383:7:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3805,
+                "name": "tokenamount",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "405:19:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3804,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "405:7:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3807,
+                "name": "lockexpiry",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "434:18:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3806,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "434:7:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3809,
+                "name": "teamActiveInvestor",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "462:25:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 3808,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "462:4:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3811,
+                "name": "tokenlocked",
+                "nodeType": "VariableDeclaration",
+                "scope": 3812,
+                "src": "530:16:11",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 3810,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "530:4:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "teamDistribution",
+            "nodeType": "StructDefinition",
+            "scope": 3980,
+            "src": "349:209:11",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 3816,
+            "name": "teamDistributionDetails",
+            "nodeType": "VariableDeclaration",
+            "scope": 3980,
+            "src": "561:60:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+              "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution)"
+            },
+            "typeName": {
+              "id": 3815,
+              "keyType": {
+                "id": 3813,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "569:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "561:36:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 3814,
+                "name": "teamDistribution",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 3812,
+                "src": "580:16:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                  "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 3819,
+            "name": "teamTokenDetailsAddr",
+            "nodeType": "VariableDeclaration",
+            "scope": 3980,
+            "src": "624:37:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 3817,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "624:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 3818,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "624:9:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3872,
+              "nodeType": "Block",
+              "src": "849:350:11",
+              "statements": [
+                {
+                  "assignments": [
+                    3831
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3831,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3873,
+                      "src": "859:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3830,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "859:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3835,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3832,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "898:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3834,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3833,
+                      "name": "_newTeamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3821,
+                      "src": "922:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "898:37:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "859:76:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3840,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3836,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "941:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3838,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "addr",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3803,
+                      "src": "941:16:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3839,
+                      "name": "_newTeamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3821,
+                      "src": "960:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "941:31:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 3841,
+                  "nodeType": "ExpressionStatement",
+                  "src": "941:31:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3846,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3842,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "978:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3844,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenamount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3805,
+                      "src": "978:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3845,
+                      "name": "_tokenamount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3823,
+                      "src": "1004:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "978:38:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3847,
+                  "nodeType": "ExpressionStatement",
+                  "src": "978:38:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3852,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3848,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "1022:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3850,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lockexpiry",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3807,
+                      "src": "1022:22:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3851,
+                      "name": "_lockexpirydate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3825,
+                      "src": "1047:15:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1022:40:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3853,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1022:40:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3858,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3854,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "1068:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3856,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "teamActiveInvestor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3809,
+                      "src": "1068:30:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 3857,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1101:4:11",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1068:37:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3859,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1068:37:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3864,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3860,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3831,
+                        "src": "1111:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3862,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenlocked",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3811,
+                      "src": "1111:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3863,
+                      "name": "_tokenLocked",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3827,
+                      "src": "1137:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1111:38:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3865,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1111:38:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3869,
+                        "name": "_newTeamAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3821,
+                        "src": "1181:12:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3866,
+                        "name": "teamTokenDetailsAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3819,
+                        "src": "1155:20:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 3868,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1155:25:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 3870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1155:39:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3871,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1155:39:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3873,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "AddTeam",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3828,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3821,
+                  "name": "_newTeamAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "750:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3820,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "750:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3823,
+                  "name": "_tokenamount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "771:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3822,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "771:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3825,
+                  "name": "_lockexpirydate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "794:23:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3824,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "794:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3827,
+                  "name": "_tokenLocked",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3873,
+                  "src": "820:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3826,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "820:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "749:89:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3829,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "849:0:11"
+            },
+            "scope": 3980,
+            "src": "733:466:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3908,
+              "nodeType": "Block",
+              "src": "1370:276:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 3887,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 3884,
+                              "name": "_teamaddr",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 3875,
+                              "src": "1438:9:11",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 3883,
+                            "name": "CheckIfTeamActive",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3962,
+                            "src": "1420:17:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                              "typeString": "function (address) view returns (bool)"
+                            }
+                          },
+                          "id": 3885,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1420:28:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 3886,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1452:4:11",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "src": "1420:36:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 3882,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4588,
+                        4589
+                      ],
+                      "referencedDeclaration": 4588,
+                      "src": "1412:7:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 3888,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1412:45:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3889,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1412:45:11"
+                },
+                {
+                  "assignments": [
+                    3891
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3891,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3909,
+                      "src": "1465:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3890,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "1465:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3895,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3892,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "1504:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3894,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3893,
+                      "name": "_teamaddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3875,
+                      "src": "1528:9:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1504:34:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1465:73:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3900,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3896,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3891,
+                        "src": "1548:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3898,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenamount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3805,
+                      "src": "1548:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3899,
+                      "name": "_tokenamount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3877,
+                      "src": "1575:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1548:39:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3901,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1548:39:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3906,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3902,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3891,
+                        "src": "1595:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3904,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lockexpiry",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3807,
+                      "src": "1595:22:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3905,
+                      "name": "_lockExpiryDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3879,
+                      "src": "1620:19:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1595:44:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3907,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1595:44:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3909,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "UpdateTeamTokenDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3880,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3875,
+                  "name": "_teamaddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3909,
+                  "src": "1234:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3874,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1234:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3877,
+                  "name": "_tokenamount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3909,
+                  "src": "1281:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3876,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1281:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3879,
+                  "name": "_lockExpiryDateTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3909,
+                  "src": "1331:27:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3878,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1331:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1233:126:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3881,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1370:0:11"
+            },
+            "scope": 3980,
+            "src": "1202:444:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3928,
+              "nodeType": "Block",
+              "src": "1737:131:11",
+              "statements": [
+                {
+                  "assignments": [
+                    3917
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3917,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3929,
+                      "src": "1743:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3916,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "1743:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3921,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3918,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "1782:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3920,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3919,
+                      "name": "_newTeamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3911,
+                      "src": "1806:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1782:37:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1743:76:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3926,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3922,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3917,
+                        "src": "1825:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3924,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "teamActiveInvestor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3809,
+                      "src": "1825:30:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 3925,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1858:5:11",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "1825:38:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3927,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1825:38:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3929,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 3914,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 3913,
+                  "name": "onlyTokenOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4094,
+                  "src": "1719:14:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1719:14:11"
+              }
+            ],
+            "name": "RemoveTeamFromFurtherInvestment",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3911,
+                  "name": "_newTeamAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3929,
+                  "src": "1690:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3910,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1690:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1689:22:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3915,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1737:0:11"
+            },
+            "scope": 3980,
+            "src": "1649:219:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3937,
+              "nodeType": "Block",
+              "src": "1932:46:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 3934,
+                      "name": "teamTokenDetailsAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3819,
+                      "src": "1944:20:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                        "typeString": "address[] storage ref"
+                      }
+                    },
+                    "id": 3935,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1944:27:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3933,
+                  "id": 3936,
+                  "nodeType": "Return",
+                  "src": "1937:34:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3938,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "TotalTeamnvestor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3930,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1898:2:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3933,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3932,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3938,
+                  "src": "1921:7:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3931,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1921:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1920:9:11"
+            },
+            "scope": 3980,
+            "src": "1873:105:11",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3961,
+              "nodeType": "Block",
+              "src": "2081:172:11",
+              "statements": [
+                {
+                  "assignments": [
+                    3946
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3946,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3962,
+                      "src": "2086:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3945,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "2086:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3950,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3947,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "2125:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3949,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3948,
+                      "name": "_teamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3940,
+                      "src": "2149:9:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2125:34:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2086:73:11"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 3954,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 3951,
+                        "name": "teamDetails",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3946,
+                        "src": "2167:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                        }
+                      },
+                      "id": 3952,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "teamActiveInvestor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3809,
+                      "src": "2167:30:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 3953,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2201:4:11",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "2167:38:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 3958,
+                  "nodeType": "IfStatement",
+                  "src": "2164:69:11",
+                  "trueBody": {
+                    "id": 3957,
+                    "nodeType": "Block",
+                    "src": "2209:24:11",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 3955,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2224:4:11",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "functionReturnParameters": 3944,
+                        "id": 3956,
+                        "nodeType": "Return",
+                        "src": "2217:11:11"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "66616c7365",
+                    "id": 3959,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "2243:5:11",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "false"
+                  },
+                  "functionReturnParameters": 3944,
+                  "id": 3960,
+                  "nodeType": "Return",
+                  "src": "2236:12:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3962,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "CheckIfTeamActive",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3941,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3940,
+                  "name": "_teamAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3962,
+                  "src": "2033:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3939,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2033:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2032:19:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3944,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3943,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3962,
+                  "src": "2074:4:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3942,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2074:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2073:6:11"
+            },
+            "scope": 3980,
+            "src": "2006:247:11",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3978,
+              "nodeType": "Block",
+              "src": "2367:126:11",
+              "statements": [
+                {
+                  "assignments": [
+                    3970
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3970,
+                      "name": "teamDetails",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 3979,
+                      "src": "2372:36:11",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 3969,
+                        "name": "teamDistribution",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 3812,
+                        "src": "2372:16:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                          "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3974,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 3971,
+                      "name": "teamDistributionDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3816,
+                      "src": "2411:23:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_teamDistribution_$3812_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinTeamTokenDistribution.teamDistribution storage ref)"
+                      }
+                    },
+                    "id": 3973,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 3972,
+                      "name": "_newTeamAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3964,
+                      "src": "2435:12:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2411:37:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_teamDistribution_$3812_storage",
+                      "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2372:76:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 3975,
+                      "name": "teamDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3970,
+                      "src": "2465:11:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_teamDistribution_$3812_storage_ptr",
+                        "typeString": "struct BrightCoinTeamTokenDistribution.teamDistribution storage pointer"
+                      }
+                    },
+                    "id": 3976,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "tokenamount",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 3805,
+                    "src": "2465:23:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3968,
+                  "id": 3977,
+                  "nodeType": "Return",
+                  "src": "2458:30:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3979,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "CheckTeamTokenAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3965,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3964,
+                  "name": "_newTeamAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3979,
+                  "src": "2315:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3963,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2315:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2314:22:11"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3968,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3967,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3979,
+                  "src": "2357:7:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3966,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2357:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2356:9:11"
+            },
+            "scope": 3980,
+            "src": "2285:208:11",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3981,
+        "src": "99:2397:11"
+      }
+    ],
+    "src": "0:2496:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2019-01-15T05:16:30.817Z"
+}

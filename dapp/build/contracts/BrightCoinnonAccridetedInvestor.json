@@ -1,0 +1,2765 @@
+{
+  "contractName": "BrightCoinnonAccridetedInvestor",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "nonAccreditedInvestors",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipRenounced",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_investoraddr",
+          "type": "address"
+        },
+        {
+          "name": "_investorGeoLocation",
+          "type": "uint256"
+        },
+        {
+          "name": "_ipfsHashRegSInvestor",
+          "type": "string"
+        }
+      ],
+      "name": "AddNonAccreditedInvestorDetails",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_investoraddr",
+          "type": "address"
+        }
+      ],
+      "name": "GetGeoLocationOfNonInvestor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506105c4806100606000396000f30060806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638da5cb5b146100725780638f32d59b146100c9578063a59b5b0b146100f8578063abc9985e1461014f578063d949979b146101bc575b600080fd5b34801561007e57600080fd5b5061008761024f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100d557600080fd5b506100de610278565b604051808215151515815260200191505060405180910390f35b34801561010457600080fd5b50610139600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102cf565b6040518082815260200191505060405180910390f35b34801561015b57600080fd5b5061017a6004803603810190808035906020019092919050505061034a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101c857600080fd5b5061024d600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610388565b005b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600080600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905060018160030160009054906101000a900460ff1660ff1614151561033c57620f423f9150610344565b806001015491505b50919050565b60028181548110151561035957fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000610392610278565b151561039d57600080fd5b60008473ffffffffffffffffffffffffffffffffffffffff16141515156103c357600080fd5b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050838160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550828160010181905550818160020190805190602001906104689291906104f3565b5060018160030160006101000a81548160ff021916908360ff16021790555060028490806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061053457805160ff1916838001178555610562565b82800160010185558215610562579182015b82811115610561578251825591602001919060010190610546565b5b50905061056f9190610573565b5090565b61059591905b80821115610591576000816000905550600101610579565b5090565b905600a165627a7a723058206451663dc8450245463d5b7f98b0feade09c48a9e77b60b8a304ece8edbf7f8f0029",
+  "deployedBytecode": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638da5cb5b146100725780638f32d59b146100c9578063a59b5b0b146100f8578063abc9985e1461014f578063d949979b146101bc575b600080fd5b34801561007e57600080fd5b5061008761024f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100d557600080fd5b506100de610278565b604051808215151515815260200191505060405180910390f35b34801561010457600080fd5b50610139600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102cf565b6040518082815260200191505060405180910390f35b34801561015b57600080fd5b5061017a6004803603810190808035906020019092919050505061034a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101c857600080fd5b5061024d600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610388565b005b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600080600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020905060018160030160009054906101000a900460ff1660ff1614151561033c57620f423f9150610344565b806001015491505b50919050565b60028181548110151561035957fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000610392610278565b151561039d57600080fd5b60008473ffffffffffffffffffffffffffffffffffffffff16141515156103c357600080fd5b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050838160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550828160010181905550818160020190805190602001906104689291906104f3565b5060018160030160006101000a81548160ff021916908360ff16021790555060028490806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061053457805160ff1916838001178555610562565b82800160010185558215610562579182015b82811115610561578251825591602001919060010190610546565b5b50905061056f9190610573565b5090565b61059591905b80821115610591576000816000905550600101610579565b5090565b905600a165627a7a723058206451663dc8450245463d5b7f98b0feade09c48a9e77b60b8a304ece8edbf7f8f0029",
+  "sourceMap": "358:1696:15:-;;;505:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;505:26:15;627:10:13;618:6;;:19;;;;;;;;;;;;;;;;;;358:1696:15;;;;;;",
+  "deployedSourceMap": "358:1696:15:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;697:70:13;;8:9:-1;5:2;;;30:1;27;20:12;5:2;697:70:13;;;;;;;;;;;;;;;;;;;;;;;;;;;1130:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1130:83:13;;;;;;;;;;;;;;;;;;;;;;;;;;;1614:436:15;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1614:436:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;880:39;;8:9:-1;5:2;;;30:1;27;20:12;5:2;880:39:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;968:638;;8:9:-1;5:2;;;30:1;27;20:12;5:2;968:638:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;697:70:13;734:7;756:6;;;;;;;;;;;749:13;;697:70;:::o;1130:83::-;1169:4;1202:6;;;;;;;;;;;1188:20;;:10;:20;;;1181:27;;1130:83;:::o;1614:436:15:-;1713:7;1729:49;1782:28;:43;1811:13;1782:43;;;;;;;;;;;;;;;1729:96;;1869:1;1834:19;:31;;;;;;;;;;;;:36;;;;1830:70;;;497:6;1877:23;;;;1830:70;2007:19;:39;;;2000:46;;1614:436;;;;;:::o;880:39::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;968:638::-;1257:40;887:9:13;:7;:9::i;:::-;879:18;;;;;;;;1244:3:15;1227:13;:20;;;;1219:29;;;;;;;;1300:28;:43;1329:13;1300:43;;;;;;;;;;;;;;;1257:86;;1374:13;1352:10;:19;;;:35;;;;;;;;;;;;;;;;;;1429:20;1396:10;:30;;:53;;;;1492:21;1458:10;:31;;:55;;;;;;;;;;;;:::i;:::-;;1547:1;1522:10;:22;;;:26;;;;;;;;;;;;;;;;;;1557:22;1585:13;1557:42;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;1557:42:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;968:638;;;;:::o;358:1696::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "/*\nReg S -\n This is for USA companies raising money outside USA. \n This can have a 6 Month or a 1 year lockin. \n (KYC/AML has to be done). The other rule is that these tokens cannot be sold to a USA person for a 1 year period. \n */\n \npragma solidity >=0.4.21 <0.5.0;\n//pragma solidity ^0.4.25;\n\nimport \"./BrightCoinTokenOwner.sol\";\nimport \"./SafeMath.sol\";\n\ncontract BrightCoinnonAccridetedInvestor is BrightCoinTokenOwner\n{\n\n\nusing SafeMath for uint;\nuint256  private constant defaultgeolation = 999999;\nconstructor() public\n{\n \n}\n  /////////////////////////////////////////////\n\n    struct nonAccreditedInvestor {\n        address investor;\n        uint256 investorGeoLocation;\n        string ipfsHashRegSInvestor; //It must contains the details of Investor\n        uint8 detailadded;\n      \n    }\n\n    mapping(address => nonAccreditedInvestor) nonAccreditedInvestorDetails;\n    address[] public nonAccreditedInvestors;\n\n    /*Function to Add Investor details*/\n     function  AddNonAccreditedInvestorDetails(address _investoraddr,\n                             uint256 _investorGeoLocation,\n                           string _ipfsHashRegSInvestor )\n                           public onlyTokenOwner \n    {\n      \n      require(_investoraddr != 0x0);\n       nonAccreditedInvestor storage investment = nonAccreditedInvestorDetails[_investoraddr];\n       investment.investor = _investoraddr;\n       investment.investorGeoLocation = _investorGeoLocation;\n       investment.ipfsHashRegSInvestor = _ipfsHashRegSInvestor;\n       investment.detailadded = 1;\n       nonAccreditedInvestors.push(_investoraddr);\n    }\n\n    \n function GetGeoLocationOfNonInvestor(address _investoraddr) \n                 view  public returns(uint256)\n {\n    nonAccreditedInvestor storage structNonAccredeted =  nonAccreditedInvestorDetails[_investoraddr];\n   if (structNonAccredeted.detailadded != 1)\n     return defaultgeolation;\n   // require(structNonAccredeted.investorGeoLocation !=0, \"Geolocation Should not be zero\");\n    return structNonAccredeted.investorGeoLocation;\n }\n\n\n}",
+  "sourcePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinnonAccridetedInvestor.sol",
+  "ast": {
+    "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinnonAccridetedInvestor.sol",
+    "exportedSymbols": {
+      "BrightCoinnonAccridetedInvestor": [
+        4403
+      ]
+    },
+    "id": 4404,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4294,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "234:32:15"
+      },
+      {
+        "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinTokenOwner.sol",
+        "file": "./BrightCoinTokenOwner.sol",
+        "id": 4295,
+        "nodeType": "ImportDirective",
+        "scope": 4404,
+        "sourceUnit": 4154,
+        "src": "295:36:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/SafeMath.sol",
+        "file": "./SafeMath.sol",
+        "id": 4296,
+        "nodeType": "ImportDirective",
+        "scope": 4404,
+        "sourceUnit": 4571,
+        "src": "332:24:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4297,
+              "name": "BrightCoinTokenOwner",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4153,
+              "src": "402:20:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BrightCoinTokenOwner_$4153",
+                "typeString": "contract BrightCoinTokenOwner"
+              }
+            },
+            "id": 4298,
+            "nodeType": "InheritanceSpecifier",
+            "src": "402:20:15"
+          }
+        ],
+        "contractDependencies": [
+          4153
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4403,
+        "linearizedBaseContracts": [
+          4403,
+          4153
+        ],
+        "name": "BrightCoinnonAccridetedInvestor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 4301,
+            "libraryName": {
+              "contractScope": null,
+              "id": 4299,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4570,
+              "src": "433:8:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$4570",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "427:24:15",
+            "typeName": {
+              "id": 4300,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "446:4:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": true,
+            "id": 4304,
+            "name": "defaultgeolation",
+            "nodeType": "VariableDeclaration",
+            "scope": 4403,
+            "src": "452:51:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 4302,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "452:7:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "393939393939",
+              "id": 4303,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "497:6:15",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_999999_by_1",
+                "typeString": "int_const 999999"
+              },
+              "value": "999999"
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 4307,
+              "nodeType": "Block",
+              "src": "526:5:15",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 4308,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4305,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "516:2:15"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4306,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "526:0:15"
+            },
+            "scope": 4403,
+            "src": "505:26:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "BrightCoinnonAccridetedInvestor.nonAccreditedInvestor",
+            "id": 4317,
+            "members": [
+              {
+                "constant": false,
+                "id": 4310,
+                "name": "investor",
+                "nodeType": "VariableDeclaration",
+                "scope": 4317,
+                "src": "624:16:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 4309,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "624:7:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4312,
+                "name": "investorGeoLocation",
+                "nodeType": "VariableDeclaration",
+                "scope": 4317,
+                "src": "650:27:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4311,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "650:7:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4314,
+                "name": "ipfsHashRegSInvestor",
+                "nodeType": "VariableDeclaration",
+                "scope": 4317,
+                "src": "687:27:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 4313,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "687:6:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4316,
+                "name": "detailadded",
+                "nodeType": "VariableDeclaration",
+                "scope": 4317,
+                "src": "767:17:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 4315,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "767:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "nonAccreditedInvestor",
+            "nodeType": "StructDefinition",
+            "scope": 4403,
+            "src": "585:213:15",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 4321,
+            "name": "nonAccreditedInvestorDetails",
+            "nodeType": "VariableDeclaration",
+            "scope": 4403,
+            "src": "804:70:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_nonAccreditedInvestor_$4317_storage_$",
+              "typeString": "mapping(address => struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor)"
+            },
+            "typeName": {
+              "id": 4320,
+              "keyType": {
+                "id": 4318,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "812:7:15",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "804:41:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_nonAccreditedInvestor_$4317_storage_$",
+                "typeString": "mapping(address => struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 4319,
+                "name": "nonAccreditedInvestor",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 4317,
+                "src": "823:21:15",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                  "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 4324,
+            "name": "nonAccreditedInvestors",
+            "nodeType": "VariableDeclaration",
+            "scope": 4403,
+            "src": "880:39:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 4322,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "880:7:15",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 4323,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "880:9:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4377,
+              "nodeType": "Block",
+              "src": "1204:402:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 4338,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 4336,
+                          "name": "_investoraddr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4326,
+                          "src": "1227:13:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "307830",
+                          "id": 4337,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1244:3:15",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0x0"
+                        },
+                        "src": "1227:20:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 4335,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4588,
+                        4589
+                      ],
+                      "referencedDeclaration": 4588,
+                      "src": "1219:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 4339,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1219:29:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4340,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1219:29:15"
+                },
+                {
+                  "assignments": [
+                    4342
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 4342,
+                      "name": "investment",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 4378,
+                      "src": "1257:40:15",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                        "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 4341,
+                        "name": "nonAccreditedInvestor",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 4317,
+                        "src": "1257:21:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 4346,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 4343,
+                      "name": "nonAccreditedInvestorDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4321,
+                      "src": "1300:28:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_nonAccreditedInvestor_$4317_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage ref)"
+                      }
+                    },
+                    "id": 4345,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 4344,
+                      "name": "_investoraddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4326,
+                      "src": "1329:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1300:43:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage",
+                      "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1257:86:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4351,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4347,
+                        "name": "investment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4342,
+                        "src": "1352:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4349,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "investor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4310,
+                      "src": "1352:19:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 4350,
+                      "name": "_investoraddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4326,
+                      "src": "1374:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1352:35:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 4352,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1352:35:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4357,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4353,
+                        "name": "investment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4342,
+                        "src": "1396:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4355,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "investorGeoLocation",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4312,
+                      "src": "1396:30:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 4356,
+                      "name": "_investorGeoLocation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4328,
+                      "src": "1429:20:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1396:53:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 4358,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1396:53:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4363,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4359,
+                        "name": "investment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4342,
+                        "src": "1458:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4361,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "ipfsHashRegSInvestor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4314,
+                      "src": "1458:31:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 4362,
+                      "name": "_ipfsHashRegSInvestor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4330,
+                      "src": "1492:21:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1458:55:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 4364,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1458:55:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4369,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4365,
+                        "name": "investment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4342,
+                        "src": "1522:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4367,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "detailadded",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4316,
+                      "src": "1522:22:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 4368,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1547:1:15",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1522:26:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 4370,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1522:26:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4374,
+                        "name": "_investoraddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4326,
+                        "src": "1585:13:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4371,
+                        "name": "nonAccreditedInvestors",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4324,
+                        "src": "1557:22:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 4373,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1557:27:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 4375,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1557:42:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 4376,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1557:42:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4378,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 4333,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 4332,
+                  "name": "onlyTokenOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4094,
+                  "src": "1184:14:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1184:14:15"
+              }
+            ],
+            "name": "AddNonAccreditedInvestorDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4331,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4326,
+                  "name": "_investoraddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4378,
+                  "src": "1010:21:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4325,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1010:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4328,
+                  "name": "_investorGeoLocation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4378,
+                  "src": "1062:28:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4327,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1062:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4330,
+                  "name": "_ipfsHashRegSInvestor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4378,
+                  "src": "1119:28:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4329,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1119:6:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1009:140:15"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4334,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1204:0:15"
+            },
+            "scope": 4403,
+            "src": "968:638:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4401,
+              "nodeType": "Block",
+              "src": "1723:327:15",
+              "statements": [
+                {
+                  "assignments": [
+                    4386
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 4386,
+                      "name": "structNonAccredeted",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 4402,
+                      "src": "1729:49:15",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                        "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 4385,
+                        "name": "nonAccreditedInvestor",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 4317,
+                        "src": "1729:21:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 4390,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 4387,
+                      "name": "nonAccreditedInvestorDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4321,
+                      "src": "1782:28:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_nonAccreditedInvestor_$4317_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage ref)"
+                      }
+                    },
+                    "id": 4389,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 4388,
+                      "name": "_investoraddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4380,
+                      "src": "1811:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1782:43:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage",
+                      "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1729:96:15"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 4394,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4391,
+                        "name": "structNonAccredeted",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4386,
+                        "src": "1834:19:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4392,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "detailadded",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4316,
+                      "src": "1834:31:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 4393,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1869:1:15",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1834:36:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 4397,
+                  "nodeType": "IfStatement",
+                  "src": "1830:70:15",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 4395,
+                      "name": "defaultgeolation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4304,
+                      "src": "1884:16:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "functionReturnParameters": 4384,
+                    "id": 4396,
+                    "nodeType": "Return",
+                    "src": "1877:23:15"
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 4398,
+                      "name": "structNonAccredeted",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4386,
+                      "src": "2007:19:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                        "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                      }
+                    },
+                    "id": 4399,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "investorGeoLocation",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 4312,
+                    "src": "2007:39:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 4384,
+                  "id": 4400,
+                  "nodeType": "Return",
+                  "src": "2000:46:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4402,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "GetGeoLocationOfNonInvestor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4380,
+                  "name": "_investoraddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4402,
+                  "src": "1651:21:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4379,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1651:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1650:23:15"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4384,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4383,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4402,
+                  "src": "1713:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4382,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1713:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1712:9:15"
+            },
+            "scope": 4403,
+            "src": "1614:436:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 4404,
+        "src": "358:1696:15"
+      }
+    ],
+    "src": "234:1820:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinnonAccridetedInvestor.sol",
+    "exportedSymbols": {
+      "BrightCoinnonAccridetedInvestor": [
+        4403
+      ]
+    },
+    "id": 4404,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4294,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "234:32:15"
+      },
+      {
+        "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/BrightCoinTokenOwner.sol",
+        "file": "./BrightCoinTokenOwner.sol",
+        "id": 4295,
+        "nodeType": "ImportDirective",
+        "scope": 4404,
+        "sourceUnit": 4154,
+        "src": "295:36:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/shubhamsuyal/code/brightcoin/dapp/contracts/SafeMath.sol",
+        "file": "./SafeMath.sol",
+        "id": 4296,
+        "nodeType": "ImportDirective",
+        "scope": 4404,
+        "sourceUnit": 4571,
+        "src": "332:24:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4297,
+              "name": "BrightCoinTokenOwner",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4153,
+              "src": "402:20:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BrightCoinTokenOwner_$4153",
+                "typeString": "contract BrightCoinTokenOwner"
+              }
+            },
+            "id": 4298,
+            "nodeType": "InheritanceSpecifier",
+            "src": "402:20:15"
+          }
+        ],
+        "contractDependencies": [
+          4153
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4403,
+        "linearizedBaseContracts": [
+          4403,
+          4153
+        ],
+        "name": "BrightCoinnonAccridetedInvestor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 4301,
+            "libraryName": {
+              "contractScope": null,
+              "id": 4299,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4570,
+              "src": "433:8:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$4570",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "427:24:15",
+            "typeName": {
+              "id": 4300,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "446:4:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": true,
+            "id": 4304,
+            "name": "defaultgeolation",
+            "nodeType": "VariableDeclaration",
+            "scope": 4403,
+            "src": "452:51:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 4302,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "452:7:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "393939393939",
+              "id": 4303,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "497:6:15",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_999999_by_1",
+                "typeString": "int_const 999999"
+              },
+              "value": "999999"
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 4307,
+              "nodeType": "Block",
+              "src": "526:5:15",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 4308,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4305,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "516:2:15"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4306,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "526:0:15"
+            },
+            "scope": 4403,
+            "src": "505:26:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "BrightCoinnonAccridetedInvestor.nonAccreditedInvestor",
+            "id": 4317,
+            "members": [
+              {
+                "constant": false,
+                "id": 4310,
+                "name": "investor",
+                "nodeType": "VariableDeclaration",
+                "scope": 4317,
+                "src": "624:16:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 4309,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "624:7:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4312,
+                "name": "investorGeoLocation",
+                "nodeType": "VariableDeclaration",
+                "scope": 4317,
+                "src": "650:27:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4311,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "650:7:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4314,
+                "name": "ipfsHashRegSInvestor",
+                "nodeType": "VariableDeclaration",
+                "scope": 4317,
+                "src": "687:27:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 4313,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "687:6:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4316,
+                "name": "detailadded",
+                "nodeType": "VariableDeclaration",
+                "scope": 4317,
+                "src": "767:17:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 4315,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "767:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "nonAccreditedInvestor",
+            "nodeType": "StructDefinition",
+            "scope": 4403,
+            "src": "585:213:15",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 4321,
+            "name": "nonAccreditedInvestorDetails",
+            "nodeType": "VariableDeclaration",
+            "scope": 4403,
+            "src": "804:70:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_nonAccreditedInvestor_$4317_storage_$",
+              "typeString": "mapping(address => struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor)"
+            },
+            "typeName": {
+              "id": 4320,
+              "keyType": {
+                "id": 4318,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "812:7:15",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "804:41:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_nonAccreditedInvestor_$4317_storage_$",
+                "typeString": "mapping(address => struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 4319,
+                "name": "nonAccreditedInvestor",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 4317,
+                "src": "823:21:15",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                  "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 4324,
+            "name": "nonAccreditedInvestors",
+            "nodeType": "VariableDeclaration",
+            "scope": 4403,
+            "src": "880:39:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 4322,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "880:7:15",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 4323,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "880:9:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4377,
+              "nodeType": "Block",
+              "src": "1204:402:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 4338,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 4336,
+                          "name": "_investoraddr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4326,
+                          "src": "1227:13:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "307830",
+                          "id": 4337,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1244:3:15",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0x0"
+                        },
+                        "src": "1227:20:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 4335,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4588,
+                        4589
+                      ],
+                      "referencedDeclaration": 4588,
+                      "src": "1219:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 4339,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1219:29:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4340,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1219:29:15"
+                },
+                {
+                  "assignments": [
+                    4342
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 4342,
+                      "name": "investment",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 4378,
+                      "src": "1257:40:15",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                        "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 4341,
+                        "name": "nonAccreditedInvestor",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 4317,
+                        "src": "1257:21:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 4346,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 4343,
+                      "name": "nonAccreditedInvestorDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4321,
+                      "src": "1300:28:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_nonAccreditedInvestor_$4317_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage ref)"
+                      }
+                    },
+                    "id": 4345,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 4344,
+                      "name": "_investoraddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4326,
+                      "src": "1329:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1300:43:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage",
+                      "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1257:86:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4351,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4347,
+                        "name": "investment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4342,
+                        "src": "1352:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4349,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "investor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4310,
+                      "src": "1352:19:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 4350,
+                      "name": "_investoraddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4326,
+                      "src": "1374:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1352:35:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 4352,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1352:35:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4357,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4353,
+                        "name": "investment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4342,
+                        "src": "1396:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4355,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "investorGeoLocation",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4312,
+                      "src": "1396:30:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 4356,
+                      "name": "_investorGeoLocation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4328,
+                      "src": "1429:20:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1396:53:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 4358,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1396:53:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4363,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4359,
+                        "name": "investment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4342,
+                        "src": "1458:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4361,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "ipfsHashRegSInvestor",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4314,
+                      "src": "1458:31:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 4362,
+                      "name": "_ipfsHashRegSInvestor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4330,
+                      "src": "1492:21:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1458:55:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 4364,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1458:55:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4369,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4365,
+                        "name": "investment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4342,
+                        "src": "1522:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4367,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "detailadded",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4316,
+                      "src": "1522:22:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 4368,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1547:1:15",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1522:26:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 4370,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1522:26:15"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4374,
+                        "name": "_investoraddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4326,
+                        "src": "1585:13:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4371,
+                        "name": "nonAccreditedInvestors",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4324,
+                        "src": "1557:22:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 4373,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1557:27:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 4375,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1557:42:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 4376,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1557:42:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4378,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 4333,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 4332,
+                  "name": "onlyTokenOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4094,
+                  "src": "1184:14:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1184:14:15"
+              }
+            ],
+            "name": "AddNonAccreditedInvestorDetails",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4331,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4326,
+                  "name": "_investoraddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4378,
+                  "src": "1010:21:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4325,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1010:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4328,
+                  "name": "_investorGeoLocation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4378,
+                  "src": "1062:28:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4327,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1062:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4330,
+                  "name": "_ipfsHashRegSInvestor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4378,
+                  "src": "1119:28:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4329,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1119:6:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1009:140:15"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4334,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1204:0:15"
+            },
+            "scope": 4403,
+            "src": "968:638:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4401,
+              "nodeType": "Block",
+              "src": "1723:327:15",
+              "statements": [
+                {
+                  "assignments": [
+                    4386
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 4386,
+                      "name": "structNonAccredeted",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 4402,
+                      "src": "1729:49:15",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                        "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 4385,
+                        "name": "nonAccreditedInvestor",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 4317,
+                        "src": "1729:21:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 4390,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 4387,
+                      "name": "nonAccreditedInvestorDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4321,
+                      "src": "1782:28:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_nonAccreditedInvestor_$4317_storage_$",
+                        "typeString": "mapping(address => struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage ref)"
+                      }
+                    },
+                    "id": 4389,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 4388,
+                      "name": "_investoraddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4380,
+                      "src": "1811:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1782:43:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage",
+                      "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1729:96:15"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 4394,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4391,
+                        "name": "structNonAccredeted",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4386,
+                        "src": "1834:19:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                          "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                        }
+                      },
+                      "id": 4392,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "detailadded",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4316,
+                      "src": "1834:31:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 4393,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1869:1:15",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1834:36:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 4397,
+                  "nodeType": "IfStatement",
+                  "src": "1830:70:15",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 4395,
+                      "name": "defaultgeolation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4304,
+                      "src": "1884:16:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "functionReturnParameters": 4384,
+                    "id": 4396,
+                    "nodeType": "Return",
+                    "src": "1877:23:15"
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 4398,
+                      "name": "structNonAccredeted",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4386,
+                      "src": "2007:19:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_nonAccreditedInvestor_$4317_storage_ptr",
+                        "typeString": "struct BrightCoinnonAccridetedInvestor.nonAccreditedInvestor storage pointer"
+                      }
+                    },
+                    "id": 4399,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "investorGeoLocation",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 4312,
+                    "src": "2007:39:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 4384,
+                  "id": 4400,
+                  "nodeType": "Return",
+                  "src": "2000:46:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4402,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "GetGeoLocationOfNonInvestor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4380,
+                  "name": "_investoraddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4402,
+                  "src": "1651:21:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4379,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1651:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1650:23:15"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4384,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4383,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4402,
+                  "src": "1713:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4382,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1713:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1712:9:15"
+            },
+            "scope": 4403,
+            "src": "1614:436:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 4404,
+        "src": "358:1696:15"
+      }
+    ],
+    "src": "234:1820:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2019-01-15T05:16:30.833Z"
+}

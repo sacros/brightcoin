@@ -1,0 +1,92 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_a",
+				"type": "uint256"
+			}
+		],
+		"name": "setA",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_b",
+				"type": "uint256"
+			}
+		],
+		"name": "setB",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "_from",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "_to",
+				"type": "uint256"
+			}
+		],
+		"name": "ASet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "_from",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "_to",
+				"type": "uint256"
+			}
+		],
+		"name": "BSet",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "a",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "b",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

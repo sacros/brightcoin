@@ -1,0 +1,26 @@
+pragma solidity >=0.4.21 <0.5.0;
+
+
+contract BrightCoinInvestmentLimit
+{
+
+    uint8 public  InvestorGeoLocation = 0;
+    uint8 public  InvestorMaxCount = 0;
+
+    struct brightCoinInvestmentLimit {
+
+    uint8 maxInvestorlimit;  //Max Investor
+    uint256 investmentLimit; //InvestmentLimit
+   
+  }
+
+mapping(uint256 => brightCoinInvestorKYCstruct) brightCoinInvestmentLimit;
+address[] public brightCoinInvestmentLimitCount;
+
+constructor() public
+{
+
+} 
+
+
+}
